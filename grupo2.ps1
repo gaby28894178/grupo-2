@@ -1,5 +1,5 @@
 for ($i = 1; $i -le 3; $i++) {
-    $adaptadores = Get-NetAdapter | Where-Object { $_.Status -eq "Up" }
+    $adaptadores = @(Get-NetAdapter | Where-Object { $_.Status -eq "Up" })
 
     $fechaHora = Get-Date -Format "dd/MM/yyyy HH:mm:ss"
     Write-Host "Verificacion $i - Fecha y hora: $fechaHora"
